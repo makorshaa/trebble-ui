@@ -1,5 +1,5 @@
 # Trebble
-![PIE Labs](https://raw.githubusercontent.com/akashmitra/pie/master/PILabs.jpg)
+![PIE Labs](https://raw.githubusercontent.com/pie-labs/pie-crust/master/PILabs.jpg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
