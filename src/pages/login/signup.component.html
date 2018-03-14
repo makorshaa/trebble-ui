@@ -1,0 +1,57 @@
+<div class="image-section">
+    <img src="assets/images/cover_picture.png" alt="Cover Picture" height="250" width="100%">
+</div>
+    
+<div class="fans-content">
+  <mat-card class="trebble-card">
+    <mat-card-header id="signup-template-header">
+      <mat-card-title>Hi,Shiba</mat-card-title>
+    </mat-card-header>
+    <mat-card-content id="complete-signup-form">
+      <form [formGroup]="signupForm" (ngSubmit)="submit(signupForm)">
+        <div class="container" fxLayout fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="start" fxLayoutGap="10px"
+          fxLayoutGap.xs="0">
+          <div fxFlex="30%">
+            <div class="avatar-section">
+              <div mat-card-avatar class="trebble-header-image"></div>
+            </div>
+          </div>
+          <div fxFlex="70%" fxFlexOrder="3" style="flex: 1 22 100%; padding-top:10px;">
+            <div class="form-section">
+              <div fxLayout.xs="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="row" fxLayoutGap="5px" id="username-section">
+                <mat-form-field>
+                  <input matInput placeholder="First Name" [(ngModel)]="firstname" value="{{firstname}}" formControlName="firstname" required>
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input matInput placeholder="Last Name" [(ngModel)]="lastname" value="{{lastname}}" formControlName="lastname" required>
+                </mat-form-field>
+              </div>
+              <mat-form-field class="email-section">
+                <input matInput placeholder="Email Address" formControlName="email" required>
+                <mat-error *ngIf="(!signupForm.controls['email'].valid && signupForm.controls['email'].touched)">
+                  Please enter a valid email address
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+        </div>
+
+        <mat-form-field class="twitter-full-width">
+          <input matInput placeholder="Twitter Handle" value="" formControlName="twitter">
+        </mat-form-field>
+        <div id="twitter-handler-checkbox">
+          <mat-checkbox class="no-twitter-checkbox">Don't have Twitter?</mat-checkbox>
+        </div>
+
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="signin-button-align complete-signin" (click)="openDialog()" [disabled]="!signupForm.valid">COMPLETE SIGN UP</button>
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
