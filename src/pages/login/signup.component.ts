@@ -1,8 +1,8 @@
 import { Component, Inject} from '@angular/core';
 import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { ConfirmationDialog } from './loginDialog.component';
 import {Router} from '@angular/router';
+import {ConfirmationDialog} from '../success_modal/successDialog.component';
 
 @Component({
   // tslint:disable-next-line:component-selector
