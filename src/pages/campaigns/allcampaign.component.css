@@ -1,0 +1,82 @@
+.campaign-button{
+  background-color: #26d0c8c7 !important;
+  color: white !important;
+  font-weight: bold;
+  float: right;
+  margin: 4px;
+  width: 213px;
+}
+.fans-list, .chat-box{
+  margin: 8px;
+  height: 100%;
+}
+.chat-box{
+  display:block;
+  overflow:auto;
+  }
+.chat-section{
+  height: 100%;
+}
+
+.card-container {
+  max-height: 430px;
+  min-height: 400px;
+}
+
+/*message section*/
+.message-form, .message-input-width, .full-width{
+  width: 100%;
+}
+.send-button{
+  background-color: #26d0c8c7 !important;
+  color: white !important;
+  font-weight: bold;
+  float: right;
+  margin: 10px;
+  bottom:0;
+}
+
+@media (min-width: 1278px){
+  .message-form{
+    position:absolute;
+    bottom: 20px;
+    width: 95%;
+  }
+
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.new-message-body{
+ width:100%;
+}
+#text-body-width .mat-input-element{
+  height:150px;
+}
+#new-campaign-message-width .mat-input-element{
+  height:320px;
+}
+.ok-button{
+  background-color: #26d0c8c7 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+#listview-fans .mat-card-title ,#listview-fans  .mat-card-subtitle{
+  margin-bottom: 6px ;
+}
+
+#listview-fans{
+  padding: 12px;
+  margin-bottom:10px;
+}
+#listview-fans .mat-card-header-text{
+  margin-left: 21px;
+ }
+
+ .fansView{
+   overflow-y: scroll;
+ }

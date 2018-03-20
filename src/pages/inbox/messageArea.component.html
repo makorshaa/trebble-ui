@@ -1,0 +1,43 @@
+
+
+<div class="container" fxLayout="column" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
+        <div mat-card-avatar class="example-header-image"></div>
+        <div class="message-display-area">
+            <mat-card>Messageareagj tuolp;</mat-card>
+
+        </div>
+    </div>
+    <div>
+        <form class="message-form">
+            <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
+            <div class="message-input-width">
+                <mat-form-field class="message-input-width">
+                    <input matInput #message maxlength="256" placeholder="Message">
+                    <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+                    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+                  </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button class="send-button">Send</button>
+            </div>
+          </div>
+          </form>
+    </div>
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

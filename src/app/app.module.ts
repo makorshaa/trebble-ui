@@ -8,22 +8,34 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
 import { SignupComponent } from '../pages/login/signup.component';
 import { routes } from './app-routing.module';
-import { ConfirmationDialog } from '../pages/login/loginDialog.component';
 import { ROUTER_PROVIDERS } from '@angular/router/src/router_module';
-import { AllcampaignComponent } from '../pages/all_campaigns/allcampaign.component';
-
+import {MatSelectModule} from '@angular/material/select';
+import { AllcampaignComponent } from '../pages/campaigns/allcampaign.component';
+import { ViewMessageAreaComponent } from '../pages/inbox/messageArea.component';
+import { ViewFansListComponent } from '../pages/inbox/fansList.component';
+import { NewCampaignRight } from '../pages/new_campaign/rightSection.component';
+import {NewCampaignLeft} from '../pages/new_campaign/leftSection.component';
+import { ConfirmationDialog} from '../pages/success_modal/successDialog.component';
+import { SendSuccessDialog } from '../pages/success_modal/sendSuccessDialog.component';
+import { ShareDataService } from '../providers/shareData.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
+    AllcampaignComponent,
+    ViewMessageAreaComponent,
+    ViewFansListComponent,
+    NewCampaignRight,
+    NewCampaignLeft,
     ConfirmationDialog,
-    AllcampaignComponent
+    SendSuccessDialog
   ],
   imports: [
     BrowserModule,
@@ -36,13 +48,15 @@ import { AllcampaignComponent } from '../pages/all_campaigns/allcampaign.compone
     ReactiveFormsModule,
     FlexLayoutModule,
     MatDialogModule,
+    MatGridListModule,
+    MatSelectModule,
     RouterModule.forRoot(routes)
   ],
   exports: [ ConfirmationDialog],
   entryComponents: [
-    ConfirmationDialog,
+    ConfirmationDialog, SendSuccessDialog
 ],
-  providers: [],
+  providers: [ShareDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

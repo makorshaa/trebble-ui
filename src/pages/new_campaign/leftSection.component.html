@@ -1,0 +1,33 @@
+
+    <form [formGroup]="newCampaignDetails" (ngSubmit)="sendnow(newCampaignDetails)">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Location" [(ngModel)]="location" value="{{location}}" formControlName="location">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-select placeholder="Gender"  formControlName="gender" required >
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let gender of gender" [value]="gender">
+              {{gender.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="5px">
+            <mat-form-field fxFlex="46%">
+                <input matInput placeholder="Age" [(ngModel)]="age" value="{{age}}" formControlName="age">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="54%">
+                <input matInput placeholder="Fan Score" [(ngModel)]="fanscore" value="{{fanscore}}" formControlName="fanscore">
+            </mat-form-field>
+          </div>
+<div id="text-body-width">
+    <mat-form-field class="new-message-body">
+        <textarea matInput placeholder="Message Body" [(ngModel)]="messagebody" value="{{messagebody}}" formControlName="messagebody"></textarea>
+      </mat-form-field>
+</div>
+          <button type="submit" mat-raised-button class="send-button" [disabled]="!newCampaignDetails.valid" (click)="openDialog()">SEND NOW</button>
+    </form>
+
+
+
+
