@@ -1,43 +1,58 @@
+<div class="container text-display" fxLayout="column" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+    <div *ngFor="let msglist of msglist">
+        <!-- message layout when user receiving message  -->
 
+        <!-- assuming artist's user id is:  +15104564545 -->
 
-<div class="container" fxLayout="column" fxLayoutGap="10px" fxLayoutGap.xs="0">
-    <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
-        <div mat-card-avatar class="example-header-image"></div>
-        <div class="message-display-area">
-            <mat-card>Messageareagj tuolp;</mat-card>
+        <div class="single-text" *ngIf="msglist.from !== '+15104564545'">
+            <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+                <div mat-card-avatar class="example-header-image"></div>
+                <div class="message-display-area">
+                    <mat-card class="chat-card">
+                        <span class="date-time-receive">{{msglist.sent_time}}</span>
+                        <span class="msg-sendername">{{msglist.from}}</span>
+                        <p>{{msglist.body}}</p>
+                    </mat-card>
 
+                </div>
+            </div>
+        </div>
+        <!--message layout when user sending message  -->
+        <div class="single-text" *ngIf="msglist.from === '+15104564545'">
+            <div class="container right-align" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="10px">
+                <div class="message-display-area">
+                    <mat-card class="chat-card msgtext-align-send">
+                        <span class="date-time-send">{{msglist.sent_time}}</span>
+                        <span class="msg-sendername">{{msglist.from}}</span>
+                        <p class="wrapword">{{msglist.body}}</p>
+
+                    </mat-card>
+                </div>
+                <div mat-card-avatar class="example-header-image"></div>
+            </div>
         </div>
     </div>
-    <div>
-        <form class="message-form">
-            <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+</div>
+
+
+
+
+<!--message layout for user to type message  -->
+
+<div>
+    <form class="message-form" [formGroup]="sendTextMessage">
+        <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
             <div class="message-input-width">
                 <mat-form-field class="message-input-width">
-                    <input matInput #message maxlength="256" placeholder="Message">
+                    <input matInput #message maxlength="256" [(ngModel)]="textmessage" placeholder="Message" formControlName="message" required>
                     <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
                     <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
-                  </mat-form-field>
+                </mat-form-field>
             </div>
             <div>
-                <button mat-raised-button class="send-button">Send</button>
+                <button mat-raised-button class="send-button" [disabled]="!sendTextMessage.valid" (click)="sendmessage(sendTextMessage.value)">Send</button>
             </div>
-          </div>
-          </form>
-    </div>
-
-
- </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+    </form>
+</div>

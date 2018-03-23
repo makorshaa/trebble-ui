@@ -2,26 +2,24 @@
     .mat-card {
         margin: 134px;
     }
-
-    .image-section{
-        margin-bottom: 2%;
-    }
 }
 @media (max-width: 599px){
     .mat-card {
     padding: 24px 16px;
     margin: 10px;
 }
+}
 
 .image-section{
-    margin-bottom: 4%;
-}
+    margin-bottom: 1%;
 }
 
 .header-text {
 text-align:center;
-margin-top: 16px;
+background-color: #d3d3d333;
+height: 45px
 }
+
 .mat-card {
     border-radius: 17px;
 }
@@ -31,5 +29,5 @@ margin-top: 16px;
 }
 
 .mat-card-title {
-    margin-bottom: 16px;
+    padding-top: 12px;
 }

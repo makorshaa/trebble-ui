@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ShareDataService {
-  getSet$: Observable<any>;
+    getSet$: Observable<any>;
     private getterSetter = new Subject<any>();
 
     constructor() {

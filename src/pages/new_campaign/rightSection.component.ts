@@ -1,6 +1,6 @@
-import { Component, Inject, Input} from '@angular/core';
-import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
-import {Router} from '@angular/router';
+import { Component, Inject, Input } from '@angular/core';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -18,7 +18,7 @@ export class NewCampaignRight {
   // form group
   newCampaignMessage() {
     this.newCampaignMessageDetails = this.fb.group({
-      yourmessage: ['', Validators.required ],
+      yourmessage: ['', Validators.required],
     });
   }
 

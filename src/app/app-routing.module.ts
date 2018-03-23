@@ -10,7 +10,7 @@ import { NewCampaignLeft } from '../pages/new_campaign/leftSection.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'signup/:id', component: SignupComponent },
   {
     path: 'allcampaign',
     component: AllcampaignComponent,
