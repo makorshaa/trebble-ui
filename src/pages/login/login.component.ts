@@ -1,16 +1,23 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UtilityServices } from '../../providers/utility.service';
+
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'login-page',
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit {
 
 
-  constructor() {
-    // If we navigated to this page, we will have an item available as a nav param
+  userid: any;
+  constructor(private appGetdataService: UtilityServices) { }
+
+  ngOnInit() {
+    this.appGetdataService.getLoginId().subscribe(data => {
+      this.userid = data.id;
+      console.log(this.userid);
+    });
   }
-
-
 }

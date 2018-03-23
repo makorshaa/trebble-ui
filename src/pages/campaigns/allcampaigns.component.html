@@ -1,40 +1,30 @@
-
 <div class="container chat-section" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayout.lg="column" fxLayoutGap="10px" fxLayoutGap.xs="0">
-   <div fxFlex="100%" fxLayout.xs="row" fxLayout.sm="row" fxLayout.md="row" fxLayoutAlign="end end">
-  <!-- buttons -->
-  <button mat-raised-button class="campaign-button">VIEW ALL CAMPAIGNS</button>
-  <button mat-raised-button class="campaign-button" *ngIf="show" [routerLink]="['./newcampaign']" (click)="toggle();">+  NEW CAMPAIGNS</button>
-  <button mat-raised-button class="campaign-button" *ngIf="!show"  [routerLink]="['./inbox']" (click)="toggle();">INBOX</button>
-   </div>
-
-
-
-<div class="container card-container" fxLayout fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="start" fxLayoutGap="1px" fxLayoutGap.xs="0">
-
-  <!-- fans list -->
-    <div fxFlex="30%">
-
-
-<mat-card class="fans-list fansView">
-    <mat-card-content>
-        <div class="outer-outlet">
-            <router-outlet></router-outlet>
-        </div>
-    </mat-card-content>
-  </mat-card>
+    <div fxFlex="100%" fxLayout.xs="row" fxLayout.sm="row" fxLayout.md="row" fxLayoutAlign="end end">
+        <!-- buttons -->
+        <button mat-raised-button class="campaign-button">VIEW ALL CAMPAIGNS</button>
+        <button mat-raised-button class="campaign-button" *ngIf="show" [routerLink]="['./newcampaign']" (click)="toggle();">+  NEW CAMPAIGNS</button>
+        <button mat-raised-button class="campaign-button" *ngIf="!show" [routerLink]="['./inbox']" (click)="toggle();">INBOX</button>
     </div>
-
-      <!-- chat box-->
-<div fxFlex="70%">
-    <mat-card class="chat-box">
-        <mat-card-content>
-            <div class="outer-outlet">
-                <router-outlet name="right"></router-outlet>
-            </div>
-        </mat-card-content>
-      </mat-card>
+    <div class="container card-container" fxLayout fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="start" fxLayoutGap="1px" fxLayoutGap.xs="0">
+        <!-- fans list -->
+        <div fxFlex="30%">
+            <mat-card class="fans-list fansView">
+                <mat-card-content>
+                    <div class="outer-outlet">
+                        <router-outlet></router-outlet>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <!-- chat box-->
+        <div fxFlex="70%">
+            <mat-card class="chat-box">
+                <mat-card-content>
+                    <div class="outer-outlet">
+                        <router-outlet name="right"></router-outlet>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-
-

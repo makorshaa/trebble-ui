@@ -1,6 +1,6 @@
-import { Component, Inject, Directive} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Component, Inject, Directive } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -14,13 +14,13 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 export class SendSuccessDialog {
   msg: string;
   description: string;
-result= { };
+  result = {};
   constructor(
     public dialogRef: MatDialogRef<SendSuccessDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-      this.msg = 'Success';
-      this.description = 'Your campaign has been sent. You will now be redirected to the inbox';
-     }
+    this.msg = 'Success';
+    this.description = 'Your campaign has been sent. You will now be redirected to the inbox';
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

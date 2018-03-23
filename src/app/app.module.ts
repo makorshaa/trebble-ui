@@ -23,6 +23,8 @@ import {NewCampaignLeft} from '../pages/new_campaign/leftSection.component';
 import { ConfirmationDialog} from '../pages/success_modal/successDialog.component';
 import { SendSuccessDialog } from '../pages/success_modal/sendSuccessDialog.component';
 import { ShareDataService } from '../providers/shareData.service';
+import { UtilityServices } from '../providers/utility.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,13 +52,14 @@ import { ShareDataService } from '../providers/shareData.service';
     MatDialogModule,
     MatGridListModule,
     MatSelectModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   exports: [ ConfirmationDialog],
   entryComponents: [
     ConfirmationDialog, SendSuccessDialog
 ],
-  providers: [ShareDataService],
+  providers: [ShareDataService, UtilityServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

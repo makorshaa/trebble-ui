@@ -1,11 +1,9 @@
-
 <div>
-    <mat-card id="listview-fans" *ngFor="let fanslist of fanslist">
+    <mat-card id="listview-fans" *ngFor="let fanslist of fanlist">
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{fanslist.name}}</mat-card-title>
+            <mat-card-title class="msg-sendername">{{fanslist.name}} <span class="fanlist-time">{{fanslist.time}}</span></mat-card-title>
             <mat-card-subtitle>{{fanslist.messagePreview}}</mat-card-subtitle>
-          </mat-card-header>
+        </mat-card-header>
     </mat-card>
 </div>
-

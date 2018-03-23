@@ -1,6 +1,6 @@
-import { Component, Inject, Directive} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Component, Inject, Directive } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -14,13 +14,13 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 export class ConfirmationDialog {
   msg: string;
   description: string;
-result= { };
+  result = {};
   constructor(
     public dialogRef: MatDialogRef<ConfirmationDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-      this.msg = 'Hi' + this.data.firstname;
-      this.description = 'Thankyou for signing Up. Please check your texts.';
-     }
+    this.msg = 'Hi' + this.data.firstname;
+    this.description = 'Thankyou for signing Up. Please check your texts.';
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

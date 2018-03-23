@@ -1,88 +1,108 @@
-
-.fans-content{
-    text-align: center;
-    margin-top: -3px;
-}
-.mdl-button.mdl-button--facebook {
-    color: rgb(63, 81, 181)
-}
-.mdl-button.mdl-button--facebook:focus:not(:active) {
-    background-color: #3b5998
-}
-.mdl-button--raised.mdl-button--facebook {
-    background: #3b5998;
-    color: rgb(255, 255, 255)
-}
-.mdl-button--raised.mdl-button--facebook:hover {
-    background-color: #3b5998
-}
-.mdl-button--raised.mdl-button--facebook:active {
-    background-color: #3b5998
-}
-.mdl-button--raised.mdl-button--facebook:focus:not(:active) {
-    background-color: #3b5998
-}
-.mdl-button--raised.mdl-button--facebook .mdl-ripple {
-    background: rgb(255, 255, 255)
-}
-.signin-button-align{
-    margin-top:40px;
-    margin-bottom:40px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
-
-/* sign up */
-.trebble-card {
-    max-width: 500px;
-  }
-
-  .trebble-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-    border-radius: 0%;
-  }
-
-  @media (min-width: 599px){
+@media (max-width: 960px) {
     .trebble-card {
-        margin: 1% 30%;
+        margin: 0 20% 5%;
+        height: 100%;
     }
-    #username-section .mat-form-field{
-      width: 49%;
+    .fans-content {
+        height: 440px;
     }
+    #username-section .mat-form-field {
+        width: 100%;
+    }
+}
 
+@media (min-width: 599px) {
+    .trebble-card {
+        margin: 0 30%;
+    }
+    #username-section .mat-form-field {
+        width: 49%;
+    }
     .mat-card-avatar {
         height: 125px;
         width: 125px;
         flex-shrink: 0;
     }
-
-}
-@media (max-width: 960px){
-    .trebble-card {
-        margin: 4% 20%;
+    .image-section {
+        margin-bottom: 1%;
     }
-    #username-section .mat-form-field{
-      width: 100%;
+}
+
+@media (max-width: 599px) {
+    .mat-card-avatar {
+        height: 100px;
+        width: 125px;
+        flex-shrink: 0;
+        margin: 0 20%;
     }
-
+    .mat-card {
+        padding: 10px 16px;
+    }
+    .image-section {
+        margin-bottom: 4%;
+    }
 }
 
-@media (max-width: 599px){
-.mat-card-avatar {
-    height: 100px;
-    width: 125px;
-    flex-shrink: 0;
-    margin: 0 20%;
-}
+.fans-content {
+    text-align: center;
 }
 
-.complete-signin{
+.mdl-button.mdl-button--facebook {
+    color: rgb(63, 81, 181)
+}
+
+.mdl-button.mdl-button--facebook:focus:not(:active) {
+    background-color: #3b5998
+}
+
+.mdl-button--raised.mdl-button--facebook {
+    background: #3b5998;
+    color: rgb(255, 255, 255)
+}
+
+.mdl-button--raised.mdl-button--facebook:hover {
+    background-color: #3b5998
+}
+
+.mdl-button--raised.mdl-button--facebook:active {
+    background-color: #3b5998
+}
+
+.mdl-button--raised.mdl-button--facebook:focus:not(:active) {
+    background-color: #3b5998
+}
+
+.mdl-button--raised.mdl-button--facebook .mdl-ripple {
+    background: rgb(255, 255, 255)
+}
+
+.signin-button-align {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* sign up */
+
+.trebble-card {
+    max-width: 500px;
+}
+
+.trebble-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    border-radius: 0%;
+}
+
+.complete-signin {
     background-color: #26d0c8c7 !important;
-    color:white !important;
+    color: white !important;
     font-weight: bold;
 }
+
 form {
     min-width: 150px;
     max-width: 500px;
@@ -93,22 +113,24 @@ form {
     width: 100%;
 }
 
-.twitter-full-width, .email-section {
-  width: 100%;
+.twitter-full-width,
+.email-section {
+    width: 100%;
 }
-.no-twitter-checkbox{
-  float: left;
-  font-size: smaller;
-  color: #18afdef0;
-  font-weight: 600;
+
+.no-twitter-checkbox {
+    float: left;
+    font-size: smaller;
+    color: #18afdef0;
+    font-weight: 600;
 }
 
 #complete-signup-form form[_ngcontent-c1] {
-  max-width: 100%;
-  width: 100%;
+    max-width: 100%;
+    width: 100%;
 }
 
-.avatar-section{
+.avatar-section {
     min-width: 100px;
     min-height: 100px;
 }
